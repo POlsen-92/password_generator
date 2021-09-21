@@ -13,19 +13,23 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+
+//variables checked by popup
 let checkedUpper //true or false
 let checkedLower  //true or false
 let checkedSpecial //true or false
 let checkedNumbers //true or false
 let length; //number
 
+//main arrays
+const upperCase = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+const lowerCase = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+const special = ['!','@','#','$','%','^','&','*','?'];
+const numbers = ['1','2','3','4','5','6','7','8','9'];
 
-const upperCase = [A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z];
-const lowerCase = [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z];
-const special = [!,@,#,$,%,^,&,*,?];
-const numbers = [1,2,3,4,5,6,7,8,9];
-const options = [];
-const passwordArray = [];
+//arrays to be pushed to
+let options = [];
+let passwordArray = [];
 
 // Check for truthiness of each main array and if true push too options array
 function generateOptions() {
