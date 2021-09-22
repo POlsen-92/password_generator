@@ -12,71 +12,68 @@ let passwordArray = [];
 
 //variables confirmed by popup
 let passwordLength;  //number of characters in password (input by text)
-let checkedUpper //true or false
-let checkedLower  //true or false
-let checkedSpecial //true or false
-let checkedNumbers //true or false
+let checkedUpper; //true or false
+let checkedLower;  //true or false
+let checkedSpecial; //true or false
+let checkedNumbers; //true or false
 
 //TODO: Create prompt for input of password length. Input must be a number and must be between 8 and 128 
 
 function chooseLength() {
   do {
-    passwordLength = parseInt(window.prompt('How Long Do You Want Your Password to Be? Choose a number between 8 and 128 characters', ""), 10);
+    passwordLength = parseInt(window.prompt('How Long Do You Want Your Password to Be? Choose a number between 8 and 128 characters', ""));
   } while(isNaN(passwordLength) || passwordLength < 8 || passwordLength > 128)
-}
+};
 
 //TODO: Create popups/confirms for uppercase, lowercase, special and numbers. Check that user confirmed at least one of the types
 
 function userInput() {
-  checkedUpper = window.confirm('Do you want Upper Case Letters?')
-  checkedLower = window.confirm('Do you want Lower Case Letters?')
-  checkedNumbers = window.confirm('Do you want Numbers?')
-  checkedSpecial = window.confirm('Do you want Special Characters?')
+  checkedUpper = window.confirm('Do you want Upper Case Letters?');
+  checkedLower = window.confirm('Do you want Lower Case Letters?');
+  checkedNumbers = window.confirm('Do you want Numbers?');
+  checkedSpecial = window.confirm('Do you want Special Characters?');
   if (!checkedUpper && !checkedLower && !checkedNumbers && !checkedSpecial) {
-    alert("Must choose at least one")
+    alert("Must choose at least one");
     userInput();
   }
-}
+};
+
 
 // Check for truthiness of each main array and if true push too options array
 function generateOptions() {
   if (checkedUpper) {
-    options.push(...upperCase)
+    options.push(...upperCase);
   }
   if (checkedLower) {
-    options.push(...lowerCase)
+    options.push(...lowerCase);
   }
   if (checkedSpecial) {
-    options.push(...special)
+    options.push(...special);
   }
   if (checkedNumbers) {
-    options.push(...numbers)
+    options.push(...numbers);
   }
-}
+};
+
 
 // function to get a random value from the options array
 function getOptions () {
   return options[Math.floor(Math.random() * options.length)]
-}
+};
+
 
 //Function with which to compare arrays for common elements
 function findCommonElement(array1, array2) {
-  // Loop for array1
-  for(let i = 0; i < array1.length; i++) {
-    // Loop for array2
-    for(let j = 0; j < array2.length; j++) {
-      // Compare the element of each and
-      // every element from both of the
-      // arrays
-      if(array1[i] === array2[j]) {
-        // Return if common element found
-        return true;
+  for(let i = 0; i < array1.length; i++) { // Loop for array1
+    for(let j = 0; j < array2.length; j++) { // Loop for array2
+      if(array1[i] === array2[j]) { // Compare the element of each and every element from both of the arrays
+        return true;  // Return if common element found
       }
     }
   }
-  // Return if no common element exist
-  return false; 
+  return false; // Return if no common element exist
 }
+
 
 // Check if array Passwords includes elements from uppercase, lowercase, special and numbers
 function checkPassword() {    
@@ -122,14 +119,8 @@ function generatePassword() {
   if (checkPassword()) {
     return passwordArray.join('');
   } else {
-    generatePassword();
+    return generatePassword();
   }
-  console.log(passwordArray)
-  console.log(passwordLength)
-  console.log(checkedUpper)
-  console.log(checkedLower)
-  console.log(checkedNumbers)
-  console.log(checkedSpecial)
 }
 
 
