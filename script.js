@@ -104,7 +104,7 @@ function checkPassword() {
   if (!a || !b || !c || !d) {
     return false;
   } else {
-    return true
+    return true;
   }
 }
 
@@ -112,7 +112,6 @@ function checkPassword() {
 //This is the generatePassword Function
 function generatePassword() {
   passwordArray = [];
-  generateOptions();
   for(i=0; i<passwordLength; i++) {
     passwordArray.push(getOptions());
   }
@@ -121,7 +120,7 @@ function generatePassword() {
   } else {
     return generatePassword();
   }
-}
+};
 
 
 //**************************************************************** */
@@ -129,8 +128,10 @@ function generatePassword() {
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+//turn into function
 chooseLength();
 userInput();
+generateOptions();
 
 function writePassword() { 
   var password = generatePassword();
