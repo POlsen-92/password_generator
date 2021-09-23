@@ -124,7 +124,6 @@ function generatePassword() {
 
 
 //**************************************************************** */
-// Write password to the #password input
 // Upon loading the webpage
 chooseLength();
 userInput();
