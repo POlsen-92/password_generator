@@ -78,26 +78,22 @@ function findCommonElement(array1, array2) {
 // Check if array Passwords includes elements from uppercase, lowercase, special and numbers
 function checkPassword() {    
   if (checkedUpper) {
-    // compare to passwordArray
-    var a = findCommonElement(passwordArray, upperCase)
+    var a = findCommonElement(passwordArray, upperCase) // compare to passwordArray
   } else {
     a = 'N/A';
   }
   if (checkedLower) {
-    // compare to passwordArray
-    var b = findCommonElement(passwordArray, lowerCase)
+    var b = findCommonElement(passwordArray, lowerCase) // compare to passwordArray
   }  else {
     b = 'N/A';
   }
   if (checkedSpecial) {
-    // compare to passwordArray
-    var c = findCommonElement(passwordArray, special)
+    var c = findCommonElement(passwordArray, special) // compare to passwordArray
   } else {
     c = 'N/A';
   }
   if (checkedNumbers) {
-    // compare to passwordArray
-    var d = findCommonElement(passwordArray, numbers)
+    var d = findCommonElement(passwordArray, numbers) // compare to passwordArray
   } else {
     d = 'N/A';
   }
