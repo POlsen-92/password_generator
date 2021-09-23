@@ -125,14 +125,14 @@ function generatePassword() {
 
 //**************************************************************** */
 // Write password to the #password input
-// Assignment Code
-var generateBtn = document.querySelector("#generate");
-
-//turn into function
+// Upon loading the webpage
 chooseLength();
 userInput();
 generateOptions();
 
+var generateBtn = document.querySelector("#generate");
+
+//Click that button
 function writePassword() { 
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
