@@ -104,3 +104,22 @@ THEN the password is either displayed in an alert or written to the page
 
 - Adding a reset button so that the user choices can be chosen again without having to reload the page
 - Having the prompts for the type and length of password be present on the screen above the "Generate Password" button so that they can be changed easily
+
+## Credits
+Built with [HTML](https://html.spec.whatwg.org/multipage/) and [CSS](https://www.w3.org/Style/CSS/Overview.en.html)
+
+Deployed with GitHub
+
+Link to the Deployed Site: [Password Generator](https://polsen-92.github.io/password_generator/)
+
+## License
+
+MIT license 
+Copyright © 2020
+
+## Creator
+
+<img src="./cover_photo.jpg" width="100px"> <br>
+Paige Olsen
+[Github](https://github.com/POlsen-92) ,
+[LinkedIn](https://www.linkedin.com/in/paige-olsen-2aba9685/)
